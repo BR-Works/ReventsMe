@@ -27,10 +27,11 @@ class NavBar extends Component {
           </Menu.Item>
           <Menu.Item as={NavLink} exact to='/events' name='Events' />
           <Menu.Item as={NavLink} exact to='/people' name='People' />
+          <Menu.Item as={NavLink} exact to='/test' name='Test' />
           <Menu.Item>
             <Button floated='right' positive inverted content='Create Event' />
           </Menu.Item>
-          {authenticated ? (
+          {authenticated ? ( 
             <SignedInMenu signOut={this.handleSignOut} />
           ) : (
             <SignedOutMenu signIn={this.handleSignIn} />
